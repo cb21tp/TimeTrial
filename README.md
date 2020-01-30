@@ -16,10 +16,11 @@ Watch our [introductory video](https://vimeo.com/388290542) for TimeTrial traini
 
 ***
 To Begin 
-1. Clone the TimeTrial repo to your Desktop
-2. Open the TimeTrial-Synthetic.R or TimeTrial-Real.R (files located in the TimeTrial_App folder) in RStudio.
+1. Clone the TimeTrial repo to your Desktop for Mac Users
+ - `ssh git@github.com:nesscoder/TimeTrial.git ~/Desktop`
+2. Open The TimeTrial-Synthetic.R or TimeTrial-Real.R using RStudio (files located in the TimeTrial_App folder).
 3. Click on the Source Button within Rstudio
-	It may take a couple minutes for TimeTrial to Install and Load the Necessary Packages
+ - It may take a couple minutes for TimeTrial to Install and Load the Necessary Packages
 4. Begin Designing your Circadian Experiment!
 
 ***
