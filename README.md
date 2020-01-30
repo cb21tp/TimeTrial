@@ -1,19 +1,7 @@
-
-
-
-###############################################################################
-████████╗██╗███╗...███╗███████╗████████╗██████╗ ██╗ █████╗ ██╗     
-╚══██╔══╝██║████╗.████║██╔════╝╚══██╔══╝██╔══██╗██║██╔══██╗██║     
-...██║...██║██╔████╔██║█████╗.....██║...██████╔╝██║███████║██║     
-...██║...██║██║╚██╔╝██║██╔══╝.....██║...██╔══██╗██║██╔══██║██║     
-...██║...██║██║.╚═╝.██║███████╗...██║...██║..██║██║██║..██║███████╗
-...╚═╝...╚═╝╚═╝.....╚═╝╚══════╝...╚═╝...╚═╝..╚═╝╚═╝╚═╝..╚═╝╚══════╝
-###############################################################################
+# TimeTrial: An Interactive Application for Optimizing the Design and Analysis of Transcriptomic Times-Series Data in Circadian Biology Research
 
 Elan Ness-Cohn, Marta Iwanaszko, William Kath, Ravi Alladad, and Rosemary Braun
-
-###############################################################################
-
+-------------------------------------------------------------------------------
 Welcome to TimeTrial!
 
 TimeTrial is an interactive application for the design and optimization of omic 
@@ -33,7 +21,7 @@ To Begin
 	It may take a couple minutes for TimeTrial to Install and Load the Necessary Packages
 4. Begin Designing your Circadian Experiment!
 
-###############################################################################
+***
 
 The TimeTrial Git Repository includes the following:
 
@@ -54,6 +42,6 @@ TimeTrial_Apps
  - Datafiles and Tutorial images used by TimeTrial
 
 
-###############################################################################
+***
 Please cite TimeTrial <INSERT CITATION>
 ©2020 TimeTrial, Northwestern University
