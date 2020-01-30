@@ -45,5 +45,6 @@ TimeTrial_Apps
 
 
 ***
-Please cite TimeTrial <INSERT CITATION>
+Please cite TimeTrial INSERT CITATION
+
 ©2020 TimeTrial, Northwestern University
