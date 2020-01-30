@@ -2,12 +2,12 @@
 
 
 ###############################################################################
-      ████████╗██╗███╗   ███╗███████╗████████╗██████╗ ██╗ █████╗ ██╗     
-      ╚══██╔══╝██║████╗ ████║██╔════╝╚══██╔══╝██╔══██╗██║██╔══██╗██║     
-         ██║   ██║██╔████╔██║█████╗     ██║   ██████╔╝██║███████║██║     
-         ██║   ██║██║╚██╔╝██║██╔══╝     ██║   ██╔══██╗██║██╔══██║██║     
-         ██║   ██║██║ ╚═╝ ██║███████╗   ██║   ██║  ██║██║██║  ██║███████╗
-         ╚═╝   ╚═╝╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝
+████████╗██╗███╗...███╗███████╗████████╗██████╗ ██╗ █████╗ ██╗     
+╚══██╔══╝██║████╗.████║██╔════╝╚══██╔══╝██╔══██╗██║██╔══██╗██║     
+...██║...██║██╔████╔██║█████╗.....██║...██████╔╝██║███████║██║     
+...██║...██║██║╚██╔╝██║██╔══╝.....██║...██╔══██╗██║██╔══██║██║     
+...██║...██║██║.╚═╝.██║███████╗...██║...██║..██║██║██║..██║███████╗
+...╚═╝...╚═╝╚═╝.....╚═╝╚══════╝...╚═╝...╚═╝..╚═╝╚═╝╚═╝..╚═╝╚══════╝
 ###############################################################################
 
 Elan Ness-Cohn, Marta Iwanaszko, William Kath, Ravi Alladad, and Rosemary Braun
@@ -26,21 +26,12 @@ TimeTrial is currently in beta.
 
 Watch our introductory video for TimeTrial training material.
 
-```{r eval=FALSE echo = F}
-library("htmltools")
-library("vembedr")
-embed_vimeo("388290542") %>%
-                div(class = "vembedr") %>%
-                div(align = "center")
-```
-
 To Begin 
 1. Clone the TimeTrial repo to your Desktop
 2. Open the TimeTrial-Synthetic.R or TimeTrial-Real.R (files located in the TimeTrial_App folder) in RStudio.
 3. Click on the Source Button within Rstudio
 	It may take a couple minutes for TimeTrial to Install and Load the Necessary Packages
 4. Begin Designing your Circadian Experiment!
-
 
 ###############################################################################
 
