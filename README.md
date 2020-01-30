@@ -1,7 +1,7 @@
 # TimeTrial: An Interactive Application for Optimizing the Design and Analysis of Transcriptomic Times-Series Data in Circadian Biology Research
-
-Elan Ness-Cohn, Marta Iwanaszko, William Kath, Ravi Alladad, and Rosemary Braun
--------------------------------------------------------------------------------
+***
+#### Elan Ness-Cohn, Marta Iwanaszko, William Kath, Ravi Alladad, and Rosemary Braun
+***
 Welcome to TimeTrial!
 
 TimeTrial is an interactive application for the design and optimization of omic 
@@ -14,7 +14,7 @@ TimeTrial is currently in beta.
 
 Watch our [introductory video](https://vimeo.com/388290542) for TimeTrial training material.
 
-
+***
 To Begin 
 1. Clone the TimeTrial repo to your Desktop
 2. Open the TimeTrial-Synthetic.R or TimeTrial-Real.R (files located in the TimeTrial_App folder) in RStudio.
