@@ -12,7 +12,8 @@ on signal shape, examine cycling detection reproducibility across biological
 datasets, and optimize experimental design for cycle detection. 
 TimeTrial is currently in beta.
 
-Watch our introductory video for TimeTrial training material.
+Watch our [introductory video](https://vimeo.com/388290542) for TimeTrial training material.
+
 
 To Begin 
 1. Clone the TimeTrial repo to your Desktop
