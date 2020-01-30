@@ -14,6 +14,8 @@ TimeTrial is currently in beta.
 
 Watch our [introductory video](https://vimeo.com/388290542) for TimeTrial training material.
 
+[![TimeTrial](https://res.cloudinary.com/marcomontalbano/image/upload/v1580425724/video_to_markdown/images/vimeo--388290542-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/388290542 "TimeTrial")
+
 ***
 To Begin 
 1. Clone the TimeTrial repo to your Desktop for Mac Users
