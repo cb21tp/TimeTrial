@@ -1,6 +1,6 @@
 # TimeTrial: An Interactive Application for Optimizing the Design and Analysis of Transcriptomic Times-Series Data in Circadian Biology Research
 ***
-#### Elan Ness-Cohn, Marta Iwanaszko, William Kath, Ravi Alladad, and Rosemary Braun
+#### Elan Ness-Cohn, Marta Iwanaszko, William Kath, Ravi Allada, and Rosemary Braun
 ***
 Welcome to TimeTrial!
 
