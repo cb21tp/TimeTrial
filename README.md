@@ -17,36 +17,37 @@ Watch our [introductory video](https://vimeo.com/388290542) for TimeTrial traini
 [![TimeTrial](https://res.cloudinary.com/marcomontalbano/image/upload/v1580425724/video_to_markdown/images/vimeo--388290542-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/388290542 "TimeTrial")
 
 ***
-To Begin 
-1. Clone the TimeTrial repo to your Desktop for Mac Users
+### Installation Instructions
+1. Clone the TimeTrial repo to your Desktop (Mac)
  - `git clone https://github.com/nesscoder/TimeTrial.git ~/Desktop`
-2. Open The TimeTrial-Synthetic.R or TimeTrial-Real.R using RStudio (files located in the TimeTrial_App folder).
-3. Click on the Source Button within Rstudio
- - It may take a couple minutes for TimeTrial to Install and Load the Necessary Packages
-4. Begin Designing your Circadian Experiment!
+2. Open The TimeTrial_Synthetic.R or TimeTrial_Real.R using RStudio 
+ - *files located in the TimeTrial_App folder*.
+3. Click on the *Run App* button within Rstudio
+ - *It may take a couple minutes for TimeTrial to install and load the necessary packages*
+4. Begin designing your circadian time-series experiment!
 
 ***
 
 The TimeTrial Git Repository includes the following:
 
-Data
- - Synthetic and RealData sets
+##### Data
+ - Raw/preprocessed synthetic and real datasets
 
-Results
- - Results of Processing all 240 synthetic and 13 Real Datasets with all 4 methods
+##### Results
+ - Results of processing all 240 synthetic and 13 real datasets with all 4 methods
 
-Scripts
- - Scripts used to Generate the Synthetic Data
- - Scripts used to Generate Each Figure In the Paper
- - Scripts used to process Data by each method, includes masterfile of parameter choices
+##### Scripts
+ - Scripts used to generate the synthetic data
+ - Scripts used to generate each figure in the manuscript
+ - Scripts used to process data by each method, includes masterfile of parameter choices
 
-TimeTrial_Apps
- - Synthetic Version of TimeTrial
- - Real Version of TimeTrial
- - Datafiles and Tutorial images used by TimeTrial
+##### TimeTrial_Apps
+ - Synthetic data version of TimeTrial
+ - Real biological data version of TimeTrial
+ - Datafiles and tutorial slides used by TimeTrial
 
 
 ***
 Please cite TimeTrial INSERT CITATION
 
-©2020 TimeTrial, Northwestern University
+TimeTrial 2020, Northwestern University
