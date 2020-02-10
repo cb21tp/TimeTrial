@@ -2,6 +2,78 @@ library(ggplot2)
 library(pastecs)
 library(tidyr)
 library(pROC)
+
+#######################################################
+#Cartoon of Concatenation On Signmoid Waveform
+#######################################################
+sigmoid <- function(x) {
+  1 / (1 + exp(-x))
+}
+plottingColors <- c("#FF9900","#377eb8")
+legendNames <- c("Rep 1","Rep 2")
+xfig1 <- seq(-5, 15, 0.1)
+xfig2 <- seq(-5, 5, 0.1)
+col1 <- rep(plottingColors[1],101)
+col2 <- rep(plottingColors[2],101)
+widthLines <- 6
+
+par(font = 2, 
+    font.axis =2, 
+    font.lab = 2,
+    cex.lab=1.5,
+    cex.axis=1, 
+    cex.main=1.5, 
+    cex.sub=1.5)
+
+layout(mat = matrix(c(1,2,3,4), nrow = 2))
+plot(x = xfig1, 
+     y = sigmoid(xfig1),
+     type = "l",
+     xlim = c(-5,15),
+     col = col1,
+     lwd = widthLines,
+     main = "48 Hour Averaged Replicates",
+     ylab = "Expression",
+     xlab = "Time",
+     axes = F)
+lines(x = xfig1,
+      y = sigmoid(xfig1), 
+      type = "l", 
+      col = col2,
+      lty = "dashed",
+      lwd = widthLines)
+legend(x = "bottomright",
+       legend = legendNames,
+       fill = plottingColors,
+       box.lwd = 0)
+axis(side = 1,at = seq(-5,15,5),labels = seq(0,48,12))
+axis(side = 2)
+box(lwd = 4)
+
+
+plot(x = c(5,5),
+     y =c(sigmoid(-5),sigmoid(5)),
+     xlim = c(-5,15),
+     type = "l" ,
+     col = "#7F7F7F",
+     lwd = widthLines, 
+     main = "24 Hour Concatenated Replicates", 
+     ylab = "Expression", 
+     xlab = "Time", 
+     axes = F)
+lines(xfig2,sigmoid(xfig2), "l",col = col1, lwd = widthLines)
+lines(xfig2+10,sigmoid(xfig2), "l",  col = col2, lwd = widthLines)
+legend(x = "bottomright",
+       legend = legendNames,
+       fill = plottingColors,
+       box.lwd = 0)
+axis(side = 1,at = seq(-5,15,5),labels = seq(0,48,12))
+axis(side = 2)
+box(lwd = 4)
+
+#######################################################
+#Load the Data For Plotting
+#######################################################
 load("~/Desktop/TimeTrial/TimeTrial_Apps/App_Data/timeTrialSyntheticDataTimeSeries.RData")
 load("~/Desktop/TimeTrial/TimeTrial_Apps/App_Data/timeTrialSyntheticDataResults.RData")
 Reviewdf <- data
@@ -31,8 +103,6 @@ SummaryStats <- as.data.frame(SummaryStats)
 ##################################################
 #High Noise Vs Low Noise - Concatination vs Avg
 ##################################################
-par(cex.lab=1.5, cex.axis=1, cex.main=1.5, cex.sub=1.5, font.lab=2, font.axis = 2)
-
 HighLowDfMean <- function(df, method, lng, smps, reps){
   HighLowDf <- df[(df$Noise != 0.2 & df$Rep != reps & df$Length == lng & df$numSmps < smps & df$Method == method),]
   Boot_Concat <- split(HighLowDf,interaction(HighLowDf$Noise < 0.2,HighLowDf$Rate,HighLowDf$Length, HighLowDf$Rep),drop = T)
@@ -76,7 +146,7 @@ summary(fitAvg)
 summary(fitCon)
 lwdCenter <- 5
 
-par(mfrow = c(2,1), font = 2)
+# par(mfrow = c(2,1), font = 2)
 plot(as.numeric(as.vector(meanLine_Avg[meanLine_Avg$NoiseHL=="High",]$numSmp)),
      meanLine_Avg[meanLine_Avg$NoiseHL=="High",]$AUC, col = colsLines[2], 
      type = "l",
@@ -102,10 +172,10 @@ points(df_AVG$NumSmp[toPlot],df_AVG$AUC[toPlot], col = colsLines[2], bg  = colsF
 
 #Plot Legend
 legend("bottomright", 
-       legend= c("Concatenated 24h","Averaged 48h"),
-       col = colsLines[c(4,2)],
-       pch=pchLines,
-       pt.bg = colsFill[c(4,2)],
+       legend= rev(c("Concatenated 24h","Averaged 48h")),
+       col = rev(colsLines[c(4,2)]),
+       pch = rev(pchLines),
+       pt.bg = rev(colsFill[c(4,2)]),
        pt.cex = 2,
        lwd = 2,
        bty = "n",
@@ -135,10 +205,10 @@ points(df_AVG$NumSmp[toPlot],df_AVG$AUC[toPlot], col = colsLines[2], bg  = colsF
 
 #Plot Legend
 legend("bottomright", 
-       legend= c("Concatenated 24h","Averaged 48h"),
-       col = colsLines[c(4,2)],
-       pch=pchLines,
-       pt.bg = colsFill[c(4,2)],
+       legend= rev(c("Concatenated 24h","Averaged 48h")),
+       col = rev(colsLines[c(4,2)]),
+       pch = rev(pchLines),
+       pt.bg = rev(colsFill[c(4,2)]),
        pt.cex = 2,
        lwd = 2,
        bty = "n",
