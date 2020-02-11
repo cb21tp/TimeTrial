@@ -37,7 +37,7 @@ schemeScatterPlotFormat <- function(dataS1,dataS2){
 }
 
 vennPlotsSet <- function(df, method, pval, logFC, colnames){
-  methodNames <- c("Arser", "BooteJTK", "JTK_Cycle", "RAIN")
+  methodNames <- c("ARSER", "BooteJTK", "JTK_Cycle", "RAIN")
   p <- getpValGeneList(df[[method]], pval, logFC)
   
   countsVenn <- vennCounts(fromList(p[colnames]))
@@ -133,4 +133,10 @@ lay <- rbind(c(NA,NA),
               c(1,2),
              c(NA,NA),
              c(3,4))
-gridExtra::grid.arrange(plot1, plot2,plot3,plot4, top=textGrob("Zhang Dataset | FDR < 0.05", gp=gpar(fontsize=30,font=2)), layout_matrix = lay, heights=unit(c(10,4,3,4), c("mm", "in","mm","in")))
+
+gridExtra::grid.arrange(plot1, plot2,plot3,plot4, 
+                        top= textGrob("Zhang Dataset | FDR < 0.05",
+                        gp = gpar(fontsize=30,font=2)), 
+                        layout_matrix = lay, 
+                        heights = unit(c(10,4,3,4), c("mm", "in","mm","in")))
+
