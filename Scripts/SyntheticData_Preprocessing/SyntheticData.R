@@ -47,7 +47,7 @@ saw <- function(tp, amp,shift,asym){
 
 #Peaked Signal
 peak <- function(tp, amp, shift, peak){
-  return(amp * (-1 + abs(sin(tp/2 - shift*(2*pi/period)))**peak))
+  return(amp * (abs(sin(tp/2 - shift*(2*pi/period)))**peak))
 }
 
 #Linear Trend
