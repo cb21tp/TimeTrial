@@ -48,6 +48,9 @@ The TimeTrial Git Repository includes the following:
 
 
 ***
-Please cite TimeTrial INSERT CITATION
+TimeTrial is Currently in Preprint on BioRxiv:
+[See Article](doi.org/10.1101/2020.04.15.043695)
+
+Ness-Cohn, E., Iwanaszko, M., Kath, W. L., Allada, R. & Braun, R. TimeTrial: An Interactive Application for Optimizing the Design and Analysis of Transcriptomic Times-Series Data in Circadian Biology Research. bioRxiv 2020.04.15.043695 (2020). doi:10.1101/2020.04.15.043695
 
 TimeTrial 2020, Northwestern University
