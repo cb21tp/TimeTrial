@@ -12,12 +12,17 @@ on signal shape, examine cycling detection reproducibility across biological
 datasets, and optimize experimental design for cycle detection. 
 TimeTrial is currently in beta.
 
+Try TimeTrial Online powered by Rstudio's shinyapps.io:
+
+- [TimeTrial Synthetic Data App ](https://nesscoder.shinyapps.io/TimeTrial_Synthetic/)
+- [TimeTrial Real Data App ](https://nesscoder.shinyapps.io/TimeTrial_Real/)
+
 Watch our [introductory video](https://vimeo.com/388290542) for TimeTrial training material.
 
 [![TimeTrial](https://res.cloudinary.com/marcomontalbano/image/upload/v1580425724/video_to_markdown/images/vimeo--388290542-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/388290542 "TimeTrial")
 
 ***
-### Installation Instructions
+### Local Installation Instructions
 1. Clone the TimeTrial repo to your Desktop (Mac)
  - `git clone https://github.com/nesscoder/TimeTrial.git ~/Desktop`
 2. Open The TimeTrial_Synthetic.R or TimeTrial_Real.R using RStudio 
@@ -48,6 +53,43 @@ The TimeTrial Git Repository includes the following:
 
 
 ***
+
+R version 3.6.3 (2020-02-29)    
+
+Packages:
+- limma_3.42.2        
+- rain_1.20.0         
+- multtest_2.42.0     
+- Biobase_2.46.0      
+- BiocGenerics_0.32.0 gmp_0.5-13.6       
+- BiocManager_1.30.10 
+- gridGraphics_0.5-0  
+- gridExtra_2.3       
+- eulerr_6.1.0        
+- UpSetR_1.4.0        
+- vembedr_0.1.3      
+- htmltools_0.4.0
+- shinyjs_1.1         
+- pROC_1.16.2         
+- pastecs_1.3.21      
+- shinythemes_1.1.2   
+- matrixStats_0.56.0 
+- gplots_3.0.3        
+- forcats_0.5.0       
+- stringr_1.4.0       
+- dplyr_0.8.5         
+- purrr_0.3.4         
+- readr_1.3.1        
+- tidyr_1.0.2         
+- tibble_3.0.1        
+- tidyverse_1.3.0     
+- plyr_1.8.6          
+- ggplot2_3.3.0       
+- shiny_1.4.0.2  
+
+
+***
+
 TimeTrial is Currently in Preprint on BioRxiv:
 [See Article](https://doi.org/10.1101/2020.04.15.043695)
 
