@@ -6,13 +6,24 @@
 #========================================================#
 
 #Load Required Packages and Install if missing
-reqPkgs <- c('ggplot2',"rain", 'plyr','tidyverse', 'gplots','matrixStats', 'shiny', 'shinythemes',"pastecs", "pROC", "shinyjs", "UpSetR", "limma","eulerr", "grid", 'gridExtra',"gridGraphics","htmltools","vembedr")
+reqPkgs <- c('ggplot2', 'plyr','tidyverse', 'gplots','matrixStats', 'shiny', 'shinythemes',"pastecs", "pROC", "shinyjs", "UpSetR","eulerr", "grid", 'gridExtra',"gridGraphics","htmltools","vembedr")
 for(pkg in reqPkgs){
   if(!require(pkg, character.only=TRUE)){
     install.packages(pkg)
   }
 }
 lapply(reqPkgs,library, character.only = TRUE)
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BoicPkg <- c('rain','limma')
+for(pkg in BoicPkg){
+  if(!require(pkg, character.only=TRUE)){
+    BiocManager::install(pkg)
+  }
+}
+lapply(BoicPkg,library, character.only = TRUE)
 
 #setworking directory and Load data
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
@@ -494,7 +505,8 @@ server <- function(input, output, session){
     #find largest Common Interaction Between Gene That are plotted
     freq <- vennCounts(data[,1:13])
     freq <- freq[order(-freq[,14]),]
-    maxIntersection <- freq[as.numeric(unlist(which.max(apply(freq[1:setSize,1:13],1,sum)))),]
+    maxSetSize <- max(which(freq[,14] > 0))
+    maxIntersection <- freq[as.numeric(unlist(which.max(apply(freq[1:maxSetSize,1:13],1,sum)))),]
     names <- names(maxIntersection)[c(as.logical(unname(maxIntersection[1:13] == 1)),F)]
     
     #set Up the Query
@@ -1188,15 +1200,14 @@ server <- function(input, output, session){
     observeEvent(input$scatter_click_schemes,{
     click <- isolate(input$scatter_click_schemes)
     
-    ds <- as.numeric(input$dataSet_schemes)
-    method <- as.numeric(input$methodSel_schemes)
-    scheme <- as.numeric(input$schemeSel_schemes)
+    ds <- as.numeric(input$dataSet_schemes)-1
+        method <- as.numeric(input$methodSel_schemes)
+        scheme <- as.numeric(input$schemeSel_schemes)
     
-    schemes <- matrix(c(2,3,2,4,3,4), ncol = 2, byrow=TRUE)
-    initd1 <- schemes[scheme,][1]
-    initd2 <- schemes[scheme,][2]
-    
-    dist <- sqrt((click$x + log(results[[method]][,initd2+ds]))^2 + (click$y + log(results[[method]][,initd1+ds]))^2)
+        initd1 <- min(scheme)
+        initd2 <- max(scheme)
+   
+        dist <- sqrt((click$x + log(results[[method]][,initd1]))^2 + (click$y + log(results[[method]][,initd2]))^2)
     if(!is.null(min(dist,na.rm = T))) {
       output <- which.min(dist)
       geneID(output)
