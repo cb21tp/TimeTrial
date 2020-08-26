@@ -1,4 +1,4 @@
-# TimeTrial: An Interactive Application for Optimizing the Design and Analysis of Transcriptomic Times-Series Data in Circadian Biology Research
+# TimeTrial: An Interactive Application for Optimizing the Design and Analysis of Transcriptomic Time-Series Data in Circadian Biology Research
 ***
 #### Elan Ness-Cohn, Marta Iwanaszko, William Kath, Ravi Allada, and Rosemary Braun
 ***
@@ -90,9 +90,9 @@ Packages:
 
 ***
 
-TimeTrial is Currently in Preprint on BioRxiv:
-[See Article](https://doi.org/10.1101/2020.04.15.043695)
+TimeTrial is Currently Published in the Journal of Biological Rhythms:
+[See Article](https://doi.org/10.1177/0748730420934672)
 
-Ness-Cohn, E., Iwanaszko, M., Kath, W. L., Allada, R. & Braun, R. TimeTrial: An Interactive Application for Optimizing the Design and Analysis of Transcriptomic Times-Series Data in Circadian Biology Research. bioRxiv 2020.04.15.043695 (2020). doi:10.1101/2020.04.15.043695
+Ness-Cohn, E., Iwanaszko, M., Kath, W. L., Allada, R. & Braun, R. TimeTrial: An Interactive Application for Optimizing the Design and Analysis of Transcriptomic Time-Series Data in Circadian Biology Research. Journal of Biological Rhythms (2020). doi.org/10.1177/0748730420934672
 
 TimeTrial 2020, Northwestern University
